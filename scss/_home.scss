@@ -70,7 +70,10 @@
       margin-bottom: 3rem;
 
       h1 {
+        max-width: 100rem;
         text-align: center;
+        margin: 0 auto;
+        margin-bottom: 3rem;
       }
 
       p {
@@ -102,6 +105,14 @@
 
     .image {
       left: -20px;
+    }
+  }
+
+  @include responsive(480px) {
+    .text {
+      h1 {
+        font-size: 4.1rem;
+      }
     }
   }
 }
@@ -172,6 +183,8 @@
 
       .icon {
         background-color: $white;
+        margin: 0 auto;
+        margin-bottom: 3rem;
       }
 
       .info {
@@ -184,6 +197,78 @@
       max-width: 90.4rem;
       @include flex(row, flex-start, space-between);
       margin-top: 4.1rem;
+    }
+  }
+
+  @include responsive(991px) {
+    .content {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .card-featured {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 3rem;
+        @include flex(column, center, center);
+
+        .info {
+          max-width: 100%;
+
+          .icon {
+            margin: 0 auto;
+            margin-bottom: 3rem;
+          }
+
+          h4,
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+
+    .top {
+      flex-direction: column;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .content {
+      ul {
+        gap: 2.5rem;
+      }
+    }
+  }
+
+  @include responsive(480px) {
+    padding-top: 6rem;
+
+    .content {
+      .info {
+        p {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .icon {
+        margin: 0 auto;
+        margin-bottom: 3rem;
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
     }
   }
 }
